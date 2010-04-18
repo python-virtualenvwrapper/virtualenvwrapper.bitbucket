@@ -1,10 +1,21 @@
 syntax: glob
+*.pyc
+README.html
+build
+dist
 distribute*.egg
 distribute*.tar.gz
-*.egg-info
+docs/build
+docs/website
+sphinx/web/templates/base.html
+tests/catch_output
+tests/testpackage/build
+tests/testpackage/dist
+tests/testpackage/testpackage.egg-info
 trace.txt
-dist
-*.pyc
+*.egg-info
+virtualenvwrapper/docs
 
 syntax: re
 .DS_Store
+^web/
