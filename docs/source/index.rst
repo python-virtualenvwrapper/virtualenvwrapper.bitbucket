@@ -27,16 +27,7 @@ project directory.
   virtualenvwrapper.user_scripts Creating /Users/dhellmann/.virtualenvs/virtualenvwrapper.bitbucket/bin/postdeactivate
   virtualenvwrapper.user_scripts Creating /Users/dhellmann/.virtualenvs/virtualenvwrapper.bitbucket/bin/preactivate
   virtualenvwrapper.user_scripts Creating /Users/dhellmann/.virtualenvs/virtualenvwrapper.bitbucket/bin/postactivate
-  in postmkvirtualenv
-  Searching for pip
-  Best match: pip 0.6.3
-  Processing pip-0.6.3-py2.6.egg
-  pip 0.6.3 is already the active version in easy-install.pth
-  Installing pip script to /Users/dhellmann/.virtualenvs/virtualenvwrapper.bitbucket/bin
-  
-  Using /Users/dhellmann/.virtualenvs/virtualenvwrapper.bitbucket/lib/python2.6/site-packages/pip-0.6.3-py2.6.egg
-  Processing dependencies for pip
-  Finished processing dependencies for pip
+
   Creating /Users/dhellmann/Devel/virtualenvwrapper.bitbucket
   Applying template bitbucket
   virtualenvwrapper.bitbucket Cloning ssh://hg@bitbucket.org/dhellmann/virtualenvwrapper.bitbucket
