@@ -30,8 +30,8 @@ test_mkproject_self () {
     mkproject -t bitbucket virtualenvwrapper.bitbucket
     assertSame "virtualenvwrapper.bitbucket" $(basename "$VIRTUAL_ENV")
     assertSame "virtualenvwrapper.bitbucket" $(basename $(pwd))
-    assertTrue "[ -d src/.hg ]"
-    assertSame "default = ssh://hg@bitbucket.org/dhellmann/virtualenvwrapper.bitbucket" "$(grep default src/.hg/hgrc)"
+    assertTrue "[ -d virtualenvwrapper.bitbucket/.hg ]"
+    assertSame "default = ssh://hg@bitbucket.org/dhellmann/virtualenvwrapper.bitbucket" "$(grep default virtualenvwrapper.bitbucket/.hg/hgrc)"
 }
 
 test_get_user_private_var () {

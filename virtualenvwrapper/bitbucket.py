@@ -31,5 +31,5 @@ def template(args):
     url = get_url(project)
     if url:
         log.info('Cloning %s', url)
-        subprocess.call(['hg', 'clone', url, 'src'], shell=False)
+        subprocess.call(['hg', 'clone', url, project], shell=False)
     return

@@ -113,7 +113,7 @@ setup(
     name = PROJECT,
     version = VERSION,
     
-    description = 'virtualenvwrapper plugin to manage a project work directory',
+    description = 'virtualenvwrapper plugin to manage a project work directory based on a BitBucket repository',
     long_description = long_description,
     
     author = 'Doug Hellmann',
