@@ -3,17 +3,6 @@ export VERSION=$(shell python setup.py --version)
 
 PROJECT=virtualenvwrapper.bitbucket
 
-# The main version of Python supported.
-PRIMARY_PYTHON_VERSION=2.6
-
-# The test-quick pattern changes the definition of
-# this variable to only run against a single version of python.
-ifeq ($(SUPPORTED_PYTHON_VERSIONS),)
-SUPPORTED_PYTHON_VERSIONS=2.5 2.6
-endif
-
-SUPPORTED_SHELLS=bash sh ksh zsh
-
 # Default target is to show help
 help:
 	@echo "sdist          - Source distribution"
@@ -47,54 +36,6 @@ website: docs/sphinx/web/templates/base.html
 installwebsite: website
 	(cd docs/website/html && rsync --rsh=ssh --archive --delete --verbose . www.doughellmann.com:/var/www/doughellmann/DocumentRoot/docs/$(PROJECT)/)
 
-# Register the new version on pypi
-.PHONY: register
-register:
-	python setup.py register
-
 # Copy the base template from my website build directory
 docs/sphinx/web/templates/base.html: ~/Devel/doughellmann/doughellmann/templates/base.html
 	cp $< $@
-
-# Testing
-TEST_SCRIPTS=$(wildcard tests/test*.sh)
-
-test:
-	for name in $(SUPPORTED_SHELLS) ; do \
-		$(MAKE) test-$$name || exit 1 ; \
-	done
-
-develop:
-	python setup.py develop
-
-test-%:
-	TEST_SHELL=$(subst test-,,$@) $(MAKE) test-loop
-
-test-zsh:
-	TEST_SHELL="zsh -o shwordsplit" $(MAKE) test-loop
-
-# For each supported version of Python,
-# - Create a new virtualenv in a temporary directory.
-# - Install virtualenvwrapper into the new virtualenv
-# - Run each test script in tests
-test-loop:
-	for py_ver in $(SUPPORTED_PYTHON_VERSIONS) ; do \
-		(cd $$TMPDIR/ && rm -rf virtualenvwrapper-test-env \
-			&& virtualenv -p /Library/Frameworks/Python.framework/Versions/$$py_ver/bin/python$$py_ver --no-site-packages virtualenvwrapper-test-env) \
-			|| exit 1 ; \
-		(echo "Installing virtualenvwrapper" && cd ~/Devel/virtualenvwrapper/src && $$TMPDIR/virtualenvwrapper-test-env/bin/python setup.py install) || exit 1 ; \
-		(echo "Installing virtualenvwrapper.project" && cd ~/Devel/virtualenvwrapper/project && $$TMPDIR/virtualenvwrapper-test-env/bin/python setup.py install) || exit 1 ; \
-		echo "Installing virtualenvwrapper.bitbucket" && \
-		$$TMPDIR/virtualenvwrapper-test-env/bin/python setup.py install || exit 1 ; \
-		for test_script in $(wildcard tests/test*.sh) ; do \
-			echo ; \
-	 		echo '********************************************************************************' ; \
-			echo "Running $$test_script with $(TEST_SHELL) under Python $$py_ver" ; \
-			VIRTUALENVWRAPPER_PYTHON=$$TMPDIR/virtualenvwrapper-test-env/bin/python SHUNIT_PARENT=$$test_script $(TEST_SHELL) $$test_script || exit 1 ; \
-			echo ; \
-		done \
-	done
-
-test-quick:
-	SUPPORTED_PYTHON_VERSIONS=$(PRIMARY_PYTHON_VERSION) $(MAKE) test-bash
-
