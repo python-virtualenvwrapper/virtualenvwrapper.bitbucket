@@ -39,8 +39,8 @@ project directory.
   updating to branch default
   8 files updated, 0 files merged, 0 files removed, 0 files unresolved
   (virtualenvwrapper.bitbucket) $ ls
-  src
-  (virtualenvwrapper.bitbucket) $ cat src/.hg/hgrc
+  virtualenvwrapper.bitbucket
+  (virtualenvwrapper.bitbucket) $ cat virtualenvwrapper.bitbucket/.hg/hgrc
   [paths]
   default = ssh://hg@bitbucket.org/dhellmann/virtualenvwrapper.bitbucket
   

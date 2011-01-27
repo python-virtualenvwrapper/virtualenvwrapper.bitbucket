@@ -130,7 +130,7 @@ setup(
                     'Environment :: Console',
                     ],
 
-    platforms = ('Any',),
+    platforms = ['Any'],
 
     provides=['virtualenvwrapper.project',
               ],

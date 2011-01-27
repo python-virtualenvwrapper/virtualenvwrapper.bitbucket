@@ -27,7 +27,12 @@ documentation.
 Running Tests
 =============
 
-The test suite for virtualenvwrapper.bitbucket uses `shunit2
-<http://shunit2.googlecode.com/>`_.  To run the tests under bash, sh,
-and zsh, use ``make test``.  To add new tests, modify or create an
-appropriate script in the ``tests`` directory.
+The test suite for virtualenvwrapper.bitbucket uses shunit2_ and tox_.
+To run the tests under bash, sh, and zsh, run ``tox`` from the top of
+the source tree.  To add new tests, modify or create an appropriate
+script in the ``tests`` directory.
+
+.. _shunit2: http://shunit2.googlecode.com/
+
+.. _tox: http://codespeak.net/tox/
+
