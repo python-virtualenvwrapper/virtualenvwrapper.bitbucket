@@ -45,7 +45,7 @@ copyright = u'2009, Doug Hellmann'
 # built documents.
 #
 # The short X.Y version.
-version = os.environ['VERSION']
+version = '1.1'
 # The full version, including alpha/beta/rc tags.
 release = version
 
@@ -91,7 +91,7 @@ pygments_style = 'sphinx'
 
 # The theme to use for HTML and HTML Help pages.  Major themes that come with
 # Sphinx are currently 'default' and 'sphinxdoc'.
-html_theme = 'sphinxdoc'
+html_theme = 'nature'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the

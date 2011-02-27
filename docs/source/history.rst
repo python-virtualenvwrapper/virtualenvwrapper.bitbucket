@@ -2,6 +2,10 @@
  Release History
 =================
 
+dev
+
+  - Repackaged the documentation
+
 1.1
 
   - Change the local name for the source directory to match the
