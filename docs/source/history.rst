@@ -2,9 +2,11 @@
  Release History
 =================
 
-dev
+1.2
 
   - Repackaged the documentation
+  - Updated the installation requirements to look for
+    virtualenvwrapper >= 2.9.
 
 1.1
 

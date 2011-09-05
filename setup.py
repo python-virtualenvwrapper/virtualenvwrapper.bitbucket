@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 PROJECT = 'virtualenvwrapper.bitbucket'
-VERSION = '1.1'
+VERSION = '1.2'
 
 # Bootstrap installation of Distribute
 import distribute_setup
@@ -132,11 +132,10 @@ setup(
 
     platforms = ['Any'],
 
-    provides=['virtualenvwrapper.project',
+    provides=['virtualenvwrapper.bitbucket',
               ],
     requires=['virtualenv',
-              'virtualenvwrapper (>=2.0)',
-              'virtualenvwrapper.project (>=1.0)',
+              'virtualenvwrapper (>=2.9)',
               'mercurial',
               ],
 
