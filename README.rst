@@ -4,10 +4,9 @@
  virtualenvwrapper.bitbucket
 =============================
 
-``virtualenvwrapper.bitbucket`` is a template for
-virtualenvwrapper.project_ to extend its project-management features.
-It automatically clones a BitBucket_ repository when creating a new
-project directory.
+``virtualenvwrapper.bitbucket`` is a template for virtualenvwrapper_
+to extend its project-management features.  It automatically clones a
+BitBucket_ repository when creating a new project directory.
 
 Refer to the `documentation page
 <http://virtualenvwrapper-bitbucket.readthedocs.org/>`__ for
@@ -34,6 +33,6 @@ USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
 OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
 PERFORMANCE OF THIS SOFTWARE.
 
-.. _virtualenvwrapper.project: http://www.doughellmann.com/projects/virtualenvwrapper.project/
+.. _virtualenvwrapper: http://www.doughellmann.com/projects/virtualenvwrapper/
 
 .. _BitBucket: http://www.bitbucket.org/
