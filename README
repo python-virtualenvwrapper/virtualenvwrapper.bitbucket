@@ -10,7 +10,7 @@ It automatically clones a BitBucket_ repository when creating a new
 project directory.
 
 Refer to the `documentation page
-<http://www.doughellmann.com/docs/virtualenvwrapper.bitbucket/>`__ for
+<http://virtualenvwrapper-bitbucket.readthedocs.org/>`__ for
 details.
 
 License
