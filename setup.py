@@ -132,7 +132,6 @@ setup(
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'License :: OSI Approved :: BSD License',
-        'programming Language :: Python',
         'Intended Audience :: Developers',
         'Environment :: Console',
         'Programming Language :: Python :: 2',
