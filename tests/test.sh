@@ -12,7 +12,9 @@ oneTimeSetUp() {
     mkdir -p "$WORKON_HOME"
     rm -rf "$PROJECT_HOME"
     mkdir -p "$PROJECT_HOME"
-    source ~/Devel/virtualenvwrapper/src/virtualenvwrapper.sh
+    venvw=`which virtualenvwrapper.sh`
+    echo "Loading $venvw"
+    source "$venvw"
 }
 
 oneTimeTearDown() {
@@ -35,14 +37,14 @@ test_mkproject_self () {
 
 test_get_user_private_var () {
     export VIRTUALENVWRAPPER_BITBUCKET_USER=myuser
-    url=$("$VIRTUALENVWRAPPER_PYTHON" -c 'from virtualenvwrapper.bitbucket import get_url; print get_url("project")')
+    url=$("$VIRTUALENVWRAPPER_PYTHON" -c 'from virtualenvwrapper.bitbucket import get_url; print(get_url("project"))')
     assertSame 'ssh://hg@bitbucket.org/myuser/project' "$url"
     unset VIRTUALENVWRAPPER_BITBUCKET_USER
 }
 
 test_get_user_var () {
     unset VIRTUALENVWRAPPER_BITBUCKET_USER
-    url="$("$VIRTUALENVWRAPPER_PYTHON" -c 'from virtualenvwrapper.bitbucket import get_url; print get_url("project")')"
+    url="$("$VIRTUALENVWRAPPER_PYTHON" -c 'from virtualenvwrapper.bitbucket import get_url; print(get_url("project"))')"
     assertSame "ssh://hg@bitbucket.org/$USER/project" "$url"
 }
 
