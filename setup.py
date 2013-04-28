@@ -125,7 +125,7 @@ setup(
     author='Doug Hellmann',
     author_email='doug.hellmann@gmail.com',
 
-    url='http://www.doughellmann.com/projects/%s/' % PROJECT,
+    url='http://virtualenvwrapper-bitbucket.readthedocs.org',
 
     classifiers=[
         'Development Status :: 5 - Production/Stable',
