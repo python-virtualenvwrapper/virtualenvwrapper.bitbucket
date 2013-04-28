@@ -1,5 +1,5 @@
 =================================
- virtualenvwrapper.bitbucket 1.2
+ virtualenvwrapper.bitbucket 2.0
 =================================
 
 What is virtualenvwrapper.bitbucket
@@ -19,9 +19,8 @@ for details.
 
 .. _BitBucket: http://www.bitbucket.org/
 
-What's New in 1.2?
+What's New in 2.0?
 ==================
 
-This release shifts from requiring virtualenvwrapper.project to using
-the new version of virtualenvwrapper that includes the project
-management features.
+This release works with Python 2.6 - 3.3 and supports the versions of
+virtualenvwrapper >= 4.0.
