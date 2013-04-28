@@ -126,8 +126,6 @@ setup(
     author_email='doug.hellmann@gmail.com',
 
     url='http://www.doughellmann.com/projects/%s/' % PROJECT,
-    download_url=('http://www.doughellmann.com/downloads/%s-%s.tar.gz' %
-                  (PROJECT, VERSION)),
 
     classifiers=[
         'Development Status :: 5 - Production/Stable',
